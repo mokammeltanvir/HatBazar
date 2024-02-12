@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/weather-icon/css/weather-icons-wind.min.css">
 <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/summernote/summernote-bs4.css">
 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <!-- Template CSS -->
 <link rel="stylesheet" href="{{asset('assets/backend')}}/css/style.css">
 <link rel="stylesheet" href="{{asset('assets/backend')}}/css/components.css">

@@ -17,6 +17,16 @@
     <script src="{{asset('assets/frontend')}}/js/plugins/jquery.vticker-min.js"></script>
     <script src="{{asset('assets/frontend')}}/js/plugins/jquery.theia.sticky.js"></script>
     <script src="{{asset('assets/frontend')}}/js/plugins/jquery.elevatezoom.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- Template  JS -->
     <script src="{{asset('assets/frontend')}}/js/main.js"></script>
     <script src="{{asset('assets/frontend')}}/js/shop.js"></script>
+
+    <script>
+        @if($errors->any())
+        @foreach($errors->all() as $error)
+
+        toastr.error("{{ $error }}")
+        @endforeach
+        @endif
+    </script>

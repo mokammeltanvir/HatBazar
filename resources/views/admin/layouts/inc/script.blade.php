@@ -14,7 +14,7 @@
 <script src="{{asset('assets/backend')}}/modules/jqvmap/dist/maps/jquery.vmap.world.js"></script>
 <script src="{{asset('assets/backend')}}/modules/summernote/summernote-bs4.js"></script>
 <script src="{{asset('assets/backend')}}/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <!-- Page Specific JS File -->
 <script src="{{asset('assets/backend')}}/js/page/index-0.js"></script>
 
