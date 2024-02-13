@@ -20,8 +20,8 @@
   ==============================-->
   <div class="wsus__dashboard_menu">
     <div class="wsusd__dashboard_user">
-      <img src="{{asset('assets/userdashboard')}}/images/dashboard_user.jpg" alt="img" class="img-fluid">
-      <p>anik roy</p>
+      <img src="{{Auth::user()->image ? asset(Auth::user()->image) : asset('assets/userdashboard/images/ts-2.jpg')}}" alt="img" class="img-fluid">
+      <p>{{Auth::user()->name}}</p>
     </div>
   </div>
   <!--=============================
