@@ -290,7 +290,7 @@
                                     <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                         <ul>
                                             <li>
-                                                <a href='page-account.html'><i class="fi fi-rs-user mr-10"></i>My Account</a>
+                                                <a href='{{route('user.dashboard')}}'><i class="fi fi-rs-user mr-10"></i>My Account</a>
                                             </li>
                                             <li>
                                                 <a href='page-account.html'><i class="fi fi-rs-location-alt mr-10"></i>Order Tracking</a>

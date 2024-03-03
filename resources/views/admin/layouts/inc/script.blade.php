@@ -18,6 +18,11 @@
 <!-- Page Specific JS File -->
 <script src="{{asset('assets/backend')}}/js/page/index-0.js"></script>
 
+<script src="//cdn.datatables.net/2.0.1/js/dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <!-- Template JS File -->
 <script src="{{asset('assets/backend')}}/js/scripts.js"></script>
 <script src="{{asset('assets/backend')}}/js/custom.js"></script>
@@ -30,3 +35,65 @@
     @endforeach
     @endif
 </script>
+
+<!-- Dynamic Delete alart -->
+
+<script>
+    $(document).ready(function(){
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+
+        $('body').on('click', '.delete-item', function(event){
+            event.preventDefault();
+
+            let deleteUrl = $(this).attr('href');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                if (result.isConfirmed) {
+
+                    $.ajax({
+                        type: 'DELETE',
+                        url: deleteUrl,
+
+                        success: function(data){
+
+                            if(data.status == 'success'){
+                                Swal.fire(
+                                    'Deleted!',
+                                    data.message,
+                                    'success'
+                                )
+                                window.location.reload();
+                            }else if (data.status == 'error'){
+                                Swal.fire(
+                                    'Cant Delete',
+                                    data.message,
+                                    'error'
+                                )
+                            }
+                        },
+                        error: function(xhr, status, error){
+                            console.log(error);
+                        }
+                    })
+                }
+            })
+        })
+
+    })
+  </script>
+@stack('scripts')
+

@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/weather-icon/css/weather-icons.min.css">
 <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/weather-icon/css/weather-icons-wind.min.css">
 <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/summernote/summernote-bs4.css">
+{{-- datatables --}}
+<link rel="stylesheet" href="//cdn.datatables.net/2.0.1/css/dataTables.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.1/css/dataTables.bootstrap5.css">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <!-- Template CSS -->
