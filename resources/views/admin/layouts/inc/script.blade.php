@@ -20,8 +20,9 @@
 
 <script src="//cdn.datatables.net/2.0.1/js/dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.1/js/dataTables.bootstrap5.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="{{asset('assets/backend')}}/js/bootstrap-iconpicker.bundle.min.js"></script>
 
 <!-- Template JS File -->
 <script src="{{asset('assets/backend')}}/js/scripts.js"></script>
