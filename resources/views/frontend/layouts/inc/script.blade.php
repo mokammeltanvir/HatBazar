@@ -18,6 +18,7 @@
     <script src="{{asset('assets/frontend')}}/js/plugins/jquery.theia.sticky.js"></script>
     <script src="{{asset('assets/frontend')}}/js/plugins/jquery.elevatezoom.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <!-- Template  JS -->
     <script src="{{asset('assets/frontend')}}/js/main.js"></script>
     <script src="{{asset('assets/frontend')}}/js/shop.js"></script>

@@ -1,56 +1,28 @@
+@php
+    $categories = \App\Models\Category::where('status', 1)->get();
+    $subCategories = \App\Models\SubCategory::where('status', 1)->get();
+@endphp
 <div class="categories-dropdown-wrap style-2 font-heading mt-30">
     <div class="d-flex categori-dropdown-inner">
         <ul>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-1.svg" alt="" />Milks and Dairies</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-2.svg" alt="" />Clothing & beauty</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-3.svg" alt="" />Pet Foods & Toy</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-4.svg" alt="" />Baking material</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-5.svg" alt="" />Fresh Fruit</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-6.svg" alt="" />Wines & Drinks</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-7.svg" alt="" />Fresh Seafood</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-8.svg" alt="" />Fast food</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-9.svg" alt="" />Vegetables</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-10.svg" alt="" />Bread and Juice</a>
-            </li>
-            <li>
-                <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/category-3.svg" alt="" />Pet Foods & Toy</a>
-            </li>
+            @foreach ($categories as $category)
+                <li>
+                    <i style="color: #3EB77E;" class="{{$category->icon}}"></i>
+                    <a class="ml-10" href="#">
+                        {{$category->name}}</a>
+                </li>
+            @endforeach
         </ul>
     </div>
     <div class="more_slide_open" style="display: none">
         <div class="d-flex categori-dropdown-inner">
             <ul>
+                @foreach ($subCategories as $subCategory)
+
                 <li>
-                    <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/icon-1.svg" alt="" />Milks and Dairies</a>
+                    <a href='#'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/icon-1.svg" alt="" />{{$subCategory->name}}</a>
                 </li>
-                <li>
-                    <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/icon-2.svg" alt="" />Clothing & beauty</a>
-                </li>
-                <li>
-                    <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/icon-3.svg" alt="" />Wines & Drinks</a>
-                </li>
-                <li>
-                    <a href='shop-grid-right.html'> <img src="{{asset('assets/frontend')}}/imgs/theme/icons/icon-4.svg" alt="" />Fresh Seafood</a>
-                </li>
+                @endforeach
             </ul>
         </div>
     </div>
