@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\Backend\AdminVendorProfileController;
 
 /* Admin Routes */
 Route::get('dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -30,3 +31,6 @@ Route::resource('sub-category', SubCategoryController::class);
 /** Brand routes */
 Route::put('brand/change-status', [BrandController::class, 'changeStatus'])->name('brand.change-status');
 Route::resource('brand', BrandController::class);
+
+/** Vendor Profile routes */
+Route::resource('vendor-profile', AdminVendorProfileController::class);
