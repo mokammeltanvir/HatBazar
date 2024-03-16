@@ -24,6 +24,7 @@
 
 <script src="{{asset('assets/backend')}}/js/bootstrap-iconpicker.bundle.min.js"></script>
 
+<script src="{{asset('assets/backend')}}/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- Template JS File -->
 <script src="{{asset('assets/backend')}}/js/scripts.js"></script>
 <script src="{{asset('assets/backend')}}/js/custom.js"></script>
