@@ -14,25 +14,39 @@
         <li class="menu-header">Ecommerce</li>
         {{-- Manage website --}}
         <li
-                class="dropdown">
+                class="dropdown {{ setActive([
+                    'admin.slider.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-cog"></i> <span>Manage Website</span></a>
                 <ul class="dropdown-menu">
-                    <li class="#"><a class="nav-link"
-                            href="{{ route('admin.slider.index') }}">Slider</a></li>
+                    <li class="{{ setActive(['admin.slider.*']) }}"><a class="nav-link"
+                        href="{{ route('admin.slider.index') }}">Slider</a></li>
                 </ul>
             </li>
 
             <li
-                class="dropdown">
+                class="dropdown {{ setActive(['admin.category.*', 'admin.sub-category.*']) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-list"></i>
                     <span>Manage Categories</span></a>
                 <ul class="dropdown-menu">
-                    <li class="#"><a class="nav-link"
+                    <li class="{{ setActive(['admin.category.*']) }}"><a class="nav-link"
                             href="{{ route('admin.category.index') }}">Category</a></li>
-                    <li class="#"><a class="nav-link"
+                    <li class="{{ setActive(['admin.sub-category.*']) }}"><a class="nav-link"
                             href="{{ route('admin.sub-category.index') }}">Sub Category</a></li>
+        </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-box"></i>
+                    <span>Manage Products</span></a>
+                <ul class="dropdown-menu">
+                    <li class="{{ setActive(['admin.brand.*']) }}"><a class="nav-link"
+                        href="{{ route('admin.brand.index') }}">Brands</a></li>
+
+                    <li class="#"><a class="nav-link"
+                            href="#">Product</a></li>
                 </ul>
             </li>
+
 
 
 
