@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <title>Hatbazar || @yield('title')</title>
 <link rel="icon" type="image/png" href="images/favicon.png">
-@include('frontend.dashboard.layouts.inc.style')
+@include('vendor.layouts.inc.style')
 </head>
 
 <body>
@@ -34,7 +34,7 @@
   ==============================-->
   <section id="wsus__dashboard">
     <div class="container-fluid">
-      @include('vendor.dashboard.layouts.inc.sidebar')
+      @include('vendor.layouts.inc.sidebar')
 <!--=============================
     DASHBOARD CONTENT START
   ==============================-->
@@ -60,7 +60,7 @@
   ==============================-->
 
 
-  @include('frontend.dashboard.layouts.inc.script')
+  @include('vendor.layouts.inc.script')
 </body>
 
 </html>

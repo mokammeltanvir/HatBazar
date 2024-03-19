@@ -1,4 +1,5 @@
-@extends('vendor.dashboard.layouts.master')
+@extends('vendor.layouts.master')
+
 @section('title', 'Vendor Dashboard')
 @section('content')
 <div class="row">

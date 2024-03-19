@@ -12,5 +12,11 @@
   <link rel="stylesheet" href="{{asset('assets/userdashboard')}}/css/jquery.classycountdown.css">
   <link rel="stylesheet" href="{{asset('assets/userdashboard')}}/css/venobox.min.css">
 
+  <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/summernote/summernote-bs4.css">
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+  <link rel="stylesheet" href="{{asset('assets/backend')}}/modules/bootstrap-daterangepicker/daterangepicker.css">
+
   <link rel="stylesheet" href="{{asset('assets/userdashboard')}}/css/style.css">
   <link rel="stylesheet" href="{{asset('assets/userdashboard')}}/css/responsive.css">

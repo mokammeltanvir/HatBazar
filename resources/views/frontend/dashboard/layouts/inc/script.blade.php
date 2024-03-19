@@ -33,5 +33,16 @@
 <!--classycountdown js-->
 <script src="{{asset('assets/userdashboard')}}/js/jquery.classycountdown.js"></script>
 
+<script src="{{asset('assets/backend')}}/modules/summernote/summernote-bs4.js"></script>
+
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="{{asset('assets/backend')}}/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!--main/custom js-->
 <script src="{{asset('assets/userdashboard')}}/js/main.js"></script>
+
+<script>
+    $('.summernote').summernote({
+        height: 200,
+        tabsize: 2
+    });
+</script>
