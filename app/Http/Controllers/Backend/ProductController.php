@@ -15,7 +15,6 @@ use App\DataTables\ProductDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
-
 class ProductController extends Controller
 {
     use ImageUploadTrait;
@@ -86,6 +85,7 @@ class ProductController extends Controller
         toastr('Created Successfully!', 'success');
 
         return redirect()->route('admin.products.index');
+
     }
 
     /**
@@ -105,7 +105,7 @@ class ProductController extends Controller
         $subCategories = SubCategory::where('category_id', $product->category_id)->get();
         $categories = Category::all();
         $brands = Brand::all();
-        return view('admin.product.edit', compact('product', 'categories', 'brands', 'subCategories'));
+        return view('admin.product.edit', compact('product', 'categories', 'brands', 'subCategories', 'childCategories'));
     }
 
     /**
@@ -156,6 +156,7 @@ class ProductController extends Controller
         toastr('Updated Successfully!', 'success');
 
         return redirect()->route('admin.products.index');
+
     }
 
     /**
@@ -164,6 +165,10 @@ class ProductController extends Controller
     public function destroy(string $id)
     {
         $product = Product::findOrFail($id);
+
+        // if(OrderProduct::where('product_id',$product->id)->count() > 0){
+        //     return response(['status' => 'error', 'message' => 'This product have orders can\'t delete it.']);
+        // }
 
         /** Delete the main product image */
         $this->deleteImage($product->thumb_image);
@@ -207,4 +212,5 @@ class ProductController extends Controller
 
         return $subCategories;
     }
+
 }

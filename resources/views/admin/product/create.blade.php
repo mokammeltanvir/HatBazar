@@ -50,7 +50,6 @@
                                     </select>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="form-group">
@@ -179,28 +178,6 @@
                 })
             })
 
-
-            /** get child categories **/
-            $('body').on('change', '.sub-category', function(e){
-                let id = $(this).val();
-                $.ajax({
-                    method: 'GET',
-                    url: "{{route('admin.product.get-child-categories')}}",
-                    data: {
-                        id:id
-                    },
-                    success: function(data){
-                        $('.child-category').html('<option value="">Select</option>')
-
-                        $.each(data, function(i, item){
-                            $('.child-category').append(`<option value="${item.id}">${item.name}</option>`)
-                        })
-                    },
-                    error: function(xhr, status, error){
-                        console.log(error);
-                    }
-                })
-            })
         })
     </script>
 @endpush
